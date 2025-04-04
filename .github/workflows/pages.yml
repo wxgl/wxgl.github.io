@@ -60,3 +60,5 @@ jobs:
           bundle install
       - name: Build site
         run: bundle exec jekyll build
+      - name: Build site
+        run: hexo generate
