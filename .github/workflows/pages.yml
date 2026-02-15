@@ -29,14 +29,12 @@ jobs:
             ${{ runner.OS }}-npm-cache
       - name: Install Dependencies
         run: npm install
-        working-directory: ./XQHYblog
       - name: Build
         run: npm run build
-        working-directory: ./XQHYblog
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./XQHYblog/public
+          path: ./public
   deploy:
     needs: build
     permissions:
